@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ربيع للتجارة — منتجات القسم مع الأسعار والمواصفات ومقارنة القيمة مقابل السعر.">
+  <title>الأقسام | ربيع للتجارة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=20261122d">
+</head>
+<body data-page="category">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <header class="nav-wrap" id="navbar">
+    <nav class="nav container">
+      <a href="index.html" class="nav-brand">
+        <img src="https://rt-rabea.com/_next/image?url=%2Flogo.png&w=256&q=75" alt="Rabee Trading">
+        <span class="brand-text">ربيع للتجارة</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="index.html#categories" class="nav-link active">الأقسام</a></li>
+        <li><a href="index.html#deals" class="nav-link">عروض اليوم</a></li>
+        <li><a href="category.html?cat=pcs" class="nav-link">كمبيوترات</a></li>
+        <li><a href="category.html?cat=laptops" class="nav-link">لابتوبات</a></li>
+        <li><a href="category.html?cat=gpu" class="nav-link">كروت شاشة</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="compare-btn" id="compareNavBtn" type="button"><i class="fa-solid fa-scale-balanced"></i> قارن</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع"><i class="fa-solid fa-moon"></i></button>
+        <a class="btn-wa-nav" href="https://wa.me/963988779070?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%D9%81%D9%8A%20%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D9%85%D9%86%D8%AA%D8%AC." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+        <button class="nav-mobile-btn" id="navMobileBtn" aria-label="القائمة"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="category-page">
+    <section class="cat-hero section-anim opened" id="catHero">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage cat-hero-inner">
+        <nav class="breadcrumb" aria-label="مسار التنقل">
+          <a href="index.html" data-nav>الرئيسية</a>
+          <i class="fa-solid fa-chevron-left"></i>
+          <a href="index.html#categories" data-nav>الأقسام</a>
+          <i class="fa-solid fa-chevron-left"></i>
+          <span id="catBreadcrumb">—</span>
+        </nav>
+        <div class="cat-hero-main">
+          <div class="cat-hero-icon"><i id="catIcon" class="fa-solid fa-box"></i></div>
+          <div class="cat-hero-text">
+            <p class="section-eyebrow">تصفح القسم</p>
+            <h1 id="catTitle">—</h1>
+            <p class="cat-en" id="catEn">—</p>
+            <p class="cat-meta"><i class="fa-solid fa-boxes-stacked"></i> <span id="catMeta">—</span></p>
+          </div>
+          <button class="btn-compare-hero" id="catCompareBtn" type="button"><i class="fa-solid fa-scale-balanced"></i> قارن منتجات هذا القسم</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-nav-strip section-anim opened" id="catNavStrip">
+      <div class="container section-stage cat-chips" id="catChips"></div>
+    </section>
+
+    <section class="cat-list-section section-anim opened" id="catList">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <div class="cat-toolbar">
+          <div class="cat-toolbar-title">
+            <h2>المنتجات</h2>
+            <span id="catResultMeta">—</span>
+            <small class="bench-legend"><i class="fa-solid fa-chart-line"></i> التقييم مبني على أرقام أداء حقيقية من PassMark</small>
+          </div>
+          <div class="cat-controls">
+            <label class="cat-search-wrap">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="search" id="catSearch" placeholder="ابحث داخل القسم..." aria-label="ابحث داخل القسم">
+            </label>
+            <label class="cat-sort-wrap">
+              <i class="fa-solid fa-arrow-down-wide-short"></i>
+              <select id="catSort" aria-label="ترتيب المنتجات">
+                <option value="default">الترتيب الافتراضي</option>
+                <option value="price-asc">السعر: الأقل أولاً</option>
+                <option value="price-desc">السعر: الأعلى أولاً</option>
+                <option value="value">القيمة مقابل السعر</option>
+                <option value="power">الأداء</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="cat-product-grid" id="catProductGrid"></div>
+      </div>
+    </section>
+
+    <section class="cta-band section-anim opened" id="catSupport">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage cta-band-inner">
+        <div class="cta-scan" aria-hidden="true"></div>
+        <div class="cta-icon"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <h2>لم تجد ما تبحث عنه؟</h2>
+          <p>أخبرنا بالمواصفات والميزانية — سنؤمّنها ونرد خلال ساعة.</p>
+        </div>
+        <a class="btn-primary" href="https://wa.me/963988779070?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D9%84%D9%85%20%D8%A3%D8%AC%D8%AF%20%D9%85%D8%A7%20%D8%A3%D8%A8%D8%AD%D8%AB%20%D8%B9%D9%86%D9%87%20%E2%80%94%20%D9%87%D9%84%20%D9%8A%D9%85%D9%83%D9%86%D9%83%D9%85%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%AA%D9%8A%20%D8%A8%D8%AA%D8%A3%D9%85%D9%8A%D9%86%D9%87%D8%9F" target="_blank" rel="noopener">راسلنا على واتساب <i class="fa-solid fa-arrow-left"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-brand">
+          <img src="https://rt-rabea.com/_next/image?url=%2Flogo.png&w=256&q=75" alt="Rabee Trading">
+          <span class="brand-text">ربيع للتجارة</span>
+        </a>
+        <p>لابتوبات، كمبيوترات، شاشات، قطع، إكسسوارات وتجميعات PC. منتجات مضمونة وخيارات تناسب كل الاستخدامات. مبيع جملة ومفرق — توصيل ضمن دمشق — شحن لجميع المحافظات السورية</p>
+        <div class="footer-socials">
+          <a href="https://t.me/rabeetrading" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://www.instagram.com/rabe3_trade" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1EbibRUgMy/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://maps.app.goo.gl/aSWoMzbAVnS5zoM28" target="_blank" rel="noopener" aria-label="Location"><i class="fa-solid fa-map-location-dot"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>الأقسام</h4>
+        <ul>
+          <li><a href="category.html?cat=pcs" data-nav>كمبيوترات</a></li>
+          <li><a href="category.html?cat=laptops" data-nav>لابتوبات</a></li>
+          <li><a href="category.html?cat=monitor" data-nav>شاشات</a></li>
+          <li><a href="category.html?cat=gpu" data-nav>كروت شاشة</a></li>
+          <li><a href="category.html?cat=keyboard" data-nav>كيبورد</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل</h4>
+        <ul>
+          <li>هاتف: <a href="tel:+963980829966">+963980829966</a></li>
+          <li>واتساب: <a href="https://wa.me/963988779070" target="_blank" rel="noopener">+963988779070</a></li>
+          <li>البريد: <a href="mailto:rabe3trade@gmail.com">rabe3trade@gmail.com</a></li>
+          <li>الموقع: ساروجة ، دمشق، سوريا</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Rabee Trading. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <button class="compare-dock" id="compareDock" type="button">
+    <span class="dock-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+    <span class="dock-text">مقارنة 3D<small id="dockCount">اختر منتجين أو ثلاثة</small></span>
+  </button>
+  <a class="float-wa" href="https://wa.me/963988779070?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D8%B1%D8%A8%D9%8A%D8%B9%20%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9!" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <button class="back-top" id="backTop" aria-label="العودة للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="تفاصيل">
+      <button class="modal-close" id="modalClose" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="zoom-overlay" id="zoomOverlay" aria-hidden="true">
+    <div class="zoom-bar">
+      <span class="zoom-title" id="zoomTitle">صورة المنتج</span>
+      <div class="zoom-tools">
+        <button type="button" id="zoomOut" aria-label="تصغير"><i class="fa-solid fa-minus"></i></button>
+        <span class="zoom-level" id="zoomLevel">100%</span>
+        <button type="button" id="zoomIn" aria-label="تكبير"><i class="fa-solid fa-plus"></i></button>
+        <button type="button" id="zoomReset" aria-label="إعادة ضبط"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <button type="button" id="zoomClose" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+    <div class="zoom-stage" id="zoomStage"><img id="zoomImg" src="" alt="" draggable="false"></div>
+    <p class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> مرّر بالفأرة للتكبير • اسحب لتحريك الصورة • اضغط Esc للإغلاق</p>
+  </div>
+
+  <div class="page-transition" id="pageTransition" aria-hidden="true">
+    <div class="pt-panel pt-a"></div>
+    <div class="pt-panel pt-b"></div>
+    <div class="pt-mark"><img src="https://rt-rabea.com/_next/image?url=%2Flogo.png&w=256&q=75" alt=""><span>ربيع للتجارة</span></div>
+  </div>
+
+  <script>
+    (function () {
+      function load(src, onload) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.onload = onload;
+        s.onerror = function () { console.error('Failed to load ' + src); };
+        document.head.appendChild(s);
+      }
+      load('data.js?t=' + Date.now(), function () {
+        load('app.js?v=20261122f');
+      });
+    })();
+  </script>
+</body>
+</html>

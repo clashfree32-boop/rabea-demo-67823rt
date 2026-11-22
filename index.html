@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ربيع للتجارة — لابتوبات، كمبيوترات، شاشات، قطع، إكسسوارات وتجميعات PC. مبيع جملة ومفرق، توصيل دمشق وشحن لكل المحافظات السورية.">
+  <title>ربيع للتجارة | Rabee Trading - عالم الكمبيوتر والـ Gaming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=20261122d">
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-orb orb-3"></div>
+
+  <!-- SIDE RAIL (new layout navigation) -->
+  <aside class="side-rail" aria-label="تنقل سريع">
+    <div class="rail-line"><span id="railProgress"></span></div>
+    <button class="rail-dot" data-target="hero" aria-label="الرئيسية"><i class="fa-solid fa-house"></i><span>الرئيسية</span></button>
+    <button class="rail-dot" data-target="categories" aria-label="الأقسام"><i class="fa-solid fa-grip"></i><span>الأقسام</span></button>
+    <button class="rail-dot" data-target="deals" aria-label="عروض اليوم"><i class="fa-solid fa-bolt"></i><span>العروض</span></button>
+    <button class="rail-dot" data-target="pcs" aria-label="كمبيوترات"><i class="fa-solid fa-desktop"></i><span>كمبيوترات</span></button>
+    <button class="rail-dot" data-target="laptops" aria-label="لابتوبات"><i class="fa-solid fa-laptop"></i><span>لابتوبات</span></button>
+    <button class="rail-dot" data-target="asus" aria-label="ASUS"><i class="fa-solid fa-microchip"></i><span>ASUS</span></button>
+    <button class="rail-dot" data-target="msi" aria-label="MSI"><i class="fa-solid fa-server"></i><span>MSI</span></button>
+    <button class="rail-dot" data-target="location" aria-label="الموقع"><i class="fa-solid fa-location-dot"></i><span>الموقع</span></button>
+  </aside>
+
+  <!-- NAV -->
+  <header class="nav-wrap" id="navbar">
+    <nav class="nav container">
+      <a href="#hero" class="nav-brand">
+        <img src="https://rt-rabea.com/_next/image?url=%2Flogo.png&w=256&q=75" alt="Rabee Trading">
+        <span class="brand-text">ربيع للتجارة</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+        <li><a href="#categories" class="nav-link">الأقسام</a></li>
+        <li><a href="#deals" class="nav-link">عروض اليوم</a></li>
+        <li><a href="#pcs" class="nav-link">كمبيوترات</a></li>
+        <li><a href="#laptops" class="nav-link">لابتوبات</a></li>
+        <li><a href="#asus" class="nav-link">ASUS</a></li>
+        <li><a href="#location" class="nav-link">الموقع</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="compare-btn" id="compareNavBtn" type="button" title="مقارنة 3D">
+          <i class="fa-solid fa-scale-balanced"></i> قارن
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a class="btn-wa-nav" href="https://wa.me/963988779070?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%D9%81%D9%8A%20%D8%A7%D8%AE%D8%AA%D9%8A%D8%A7%D8%B1%20%D9%85%D9%86%D8%AA%D8%AC." target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> واتساب
+        </a>
+        <button class="nav-mobile-btn" id="navMobileBtn" aria-label="القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-anim opened" id="hero" data-index="00">
+      <div class="hero-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="container hero-grid section-stage">
+        <div class="hero-content">
+          <div class="hero-kicker reveal-up">
+            <span class="kicker-pulse"></span>
+            متجر ربيع للتجارة <span class="kicker-sep">/</span> تشكيلة 2026
+          </div>
+          <h1 class="hero-title reveal-up">
+            <span class="hero-line">جهازك القادم</span>
+            <span class="hero-line hero-line-accent">يبدأ من هنا<span class="hero-underline"></span></span>
+          </h1>
+          <p class="hero-desc reveal-up">
+            قطع أصلية، لابتوبات وتجميعات جاهزة بأسعار واضحة. قارن مواصفات أي جهازين، اختر ما يناسبك، واطلب عبر واتساب خلال دقائق.
+          </p>
+          <div class="hero-cta reveal-up">
+            <a href="#categories" class="btn-primary">تصفح كل الأقسام <i class="fa-solid fa-arrow-left"></i></a>
+            <button class="btn-compare-hero" id="compareHeroBtn" type="button">
+              <i class="fa-solid fa-scale-balanced"></i> قارن بـ 3D
+            </button>
+          </div>
+          <div class="hero-trust reveal-up">
+            <span><i class="fa-solid fa-shield-halved"></i> جودة مضمونة</span>
+            <span><i class="fa-solid fa-truck-fast"></i>شحن كل المحافظات</span>
+            <span><i class="fa-brands fa-whatsapp"></i>رد خلال دقائق</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal-up">
+          <div class="hero-display" id="hero3d">
+            <div class="hero-card-glow"></div>
+            <div class="hero-ring ring-a"></div>
+            <div class="hero-ring ring-b"></div>
+            <span class="hc corner-tl"></span><span class="hc corner-tr"></span>
+            <span class="hc corner-bl"></span><span class="hc corner-br"></span>
+            <div class="hero-emblem">
+              <img src="https://rt-rabea.com/_next/image?url=%2Flogo.png&w=640&q=75" alt="Rabee Trading">
+              <span>ربيع للتجارة</span>
+            </div>
+            <section class="hero-carousel" id="heroCarousel" aria-label="منتجات موصى بها" aria-roledescription="carousel">
+              <div class="hc-toolbar">
+                <span class="hf-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> مختارة لك</span>
+                <div class="hc-controls">
+                  <span class="hf-counter" id="heroSlideCounter">1 / 1</span>
+                  <button type="button" class="hc-arrow" id="heroPrev" aria-label="المنتج السابق"><i class="fa-solid fa-chevron-right"></i></button>
+                  <button type="button" class="hc-arrow" id="heroNext" aria-label="المنتج التالي"><i class="fa-solid fa-chevron-left"></i></button>
+                </div>
+              </div>
+              <div class="hero-viewport" id="heroViewport" tabindex="0" aria-label="اسحب لتصفح المنتجات الموصى بها">
+                <div class="hero-track" id="heroTrack"></div>
+              </div>
+              <div class="hf-dots" id="heroDots" role="tablist" aria-label="اختر منتجاً"></div>
+            </section>
+            <div class="floating-chip chip-1"><i class="fa-solid fa-microchip"></i> قطع أصلية</div>
+            <div class="floating-chip chip-2"><i class="fa-solid fa-shield-halved"></i> ضمان</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <a href="#search" aria-label="اسفل"><i class="fa-solid fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- COMMAND STRIP / SEARCH -->
+    <section class="cmd-strip section-anim" id="search" data-index="01">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <div class="cmd-label"><i class="fa-solid fa-magnifying-glass"></i> ابحث عن جهازك</div>
+        <div class="search-wrap">
+          <form class="search-bar" id="searchForm" role="search" autocomplete="off">
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="search" id="searchInput" placeholder="ابحث بالاسم أو القسم أو المواصفة... RTX، لابتوب، 16GB" aria-label="ابحث عن منتج بالاسم أو القسم أو المواصفة" autocomplete="off" aria-controls="searchSuggestions" aria-expanded="false">
+            <button type="submit" class="btn-primary">بحث</button>
+          </form>
+          <div class="search-suggestions" id="searchSuggestions" role="listbox" aria-label="اقتراحات البحث" hidden></div>
+        </div>
+        <button class="cmd-compare" id="compareStripBtn" type="button"><i class="fa-solid fa-scale-balanced"></i> مقارنة 3D</button>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands-strip section-anim" id="brands" data-index="02">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <p class="section-eyebrow center-eyebrow reveal-up">العلامات التي نتعامل بها</p>
+      </div>
+      <div class="marquee-wrap reveal-up">
+        <div class="marquee-track" id="brandTrack"></div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section section-cats section-anim" id="categories" data-index="03">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">01</span>
+            <div>
+              <p class="section-eyebrow">تسوق حسب القسم</p>
+              <h2 class="section-title">اختر القسم المناسب لك</h2>
+              <p class="section-sub">افتح صفحة القسم لعرض كل المنتجات المتوفرة بداخله مع المقارنة والتكبير — ونؤكد التوفر خلال دقائق.</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <span class="head-pill"><i class="fa-solid fa-layer-group"></i> <b id="catCountPill">26</b> قسم</span>
+          </div>
+        </header>
+        <div class="cat-grid" id="catGrid"></div>
+      </div>
+    </section>
+
+    <!-- DEALS -->
+    <section class="section deals-section section-anim" id="deals" data-index="04">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">02</span>
+            <div>
+              <p class="section-eyebrow">عروض اليوم</p>
+              <h2 class="section-title">كمية محدودة وأسعار مباشرة</h2>
+              <p class="section-sub">راسلنا قبل نفاد الكمية — العداد يعود للصفر كل يوم.</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <div class="countdown" id="dealCountdown" aria-label="الوقت المتبقي">
+              <span class="cd-label"><i class="fa-solid fa-fire"></i> ينتهي خلال</span>
+              <div class="cd-units">
+                <span class="cd-unit"><b id="cdH">00</b><small>ساعة</small></span>
+                <span class="cd-sep">:</span>
+                <span class="cd-unit"><b id="cdM">00</b><small>دقيقة</small></span>
+                <span class="cd-sep">:</span>
+                <span class="cd-unit"><b id="cdS">00</b><small>ثانية</small></span>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="products-grid" id="dealsGrid"></div>
+      </div>
+    </section>
+
+    <!-- FEATURED -->
+    <section class="section section-featured section-anim" id="featured" data-index="05">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">03</span>
+            <div>
+              <p class="section-eyebrow">منتجات مميزة</p>
+              <h2 class="section-title">لمحة عما يتصدر المبيعات هذا الأسبوع</h2>
+              <p class="section-sub">اختيارات مختارة بعناية — اضغط على أي منتج لعرض التفاصيل الكاملة.</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <button class="head-pill head-pill-btn" id="showAllProducts" type="button"><i class="fa-solid fa-grip"></i> عرض كل المنتجات</button>
+          </div>
+        </header>
+        <div class="products-grid" id="featuredGrid"></div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE: PCS -->
+    <section class="section showcase-section section-anim" id="pcs" data-index="06">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">04</span>
+            <div>
+              <p class="section-eyebrow">Gaming & Workstations</p>
+              <h2 class="section-title">كمبيوترات</h2>
+              <p class="section-sub">تجميعات جاهزة ومكونات مختارة — قارن بينها بـ 3D قبل الطلب.</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <button class="head-pill head-pill-btn" data-compare-group="pcs" type="button"><i class="fa-solid fa-scale-balanced"></i> قارن كمبيوترات</button>
+          </div>
+        </header>
+        <div class="showcase-grid">
+          <div class="showcase-intro reveal-piece" style="--d:.05s">
+            <span class="showcase-kicker">01 / PCs</span>
+            <div class="showcase-visual"><i class="fa-solid fa-desktop"></i></div>
+            <h3>قوة في صندوق واحد</h3>
+            <p>من تجميعات Gaming إلى أجهزة العمل — اختر ما يناسبك وشاهد الفروق بوضوح.</p>
+            <button class="showcase-cta" data-compare-group="pcs" type="button"><i class="fa-solid fa-scale-balanced"></i> ابدأ المقارنة</button>
+          </div>
+          <div class="showcase-tiles" id="pcsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE: LAPTOPS -->
+    <section class="section showcase-section reverse section-anim" id="laptops" data-index="07">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">05</span>
+            <div>
+              <p class="section-eyebrow">Laptops</p>
+              <h2 class="section-title">لابتوبات</h2>
+              <p class="section-sub">خيارات للدراسة والعمل والألعاب — وازن بين المعالج والرام والسعر.</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <button class="head-pill head-pill-btn" data-compare-group="laptops" type="button"><i class="fa-solid fa-scale-balanced"></i> قارن لابتوبات</button>
+          </div>
+        </header>
+        <div class="showcase-grid">
+          <div class="showcase-intro reveal-piece" style="--d:.05s">
+            <span class="showcase-kicker">02 / LAPTOPS</span>
+            <div class="showcase-visual"><i class="fa-solid fa-laptop"></i></div>
+            <h3>اختر بثقة</h3>
+            <p>قارن المواصفات جنباً إلى جنب، واعرف أي لابتوب يستحق ميزانيتك.</p>
+            <button class="showcase-cta" data-compare-group="laptops" type="button"><i class="fa-solid fa-scale-balanced"></i> ابدأ المقارنة</button>
+          </div>
+          <div class="showcase-tiles" id="laptopsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE: ASUS -->
+    <section class="section showcase-section section-anim" id="asus" data-index="08">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">06</span>
+            <div>
+              <p class="section-eyebrow">Brand Spotlight</p>
+              <h2 class="section-title">ASUS</h2>
+              <p class="section-sub">شاشات، كروت شاشة، لوحات أم، تبريد وبور سبلاي من أسوس.</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <button class="head-pill head-pill-btn" data-compare-group="components" type="button"><i class="fa-solid fa-scale-balanced"></i> قارن المكونات</button>
+          </div>
+        </header>
+        <div class="showcase-grid">
+          <div class="showcase-intro reveal-piece" style="--d:.05s">
+            <span class="showcase-kicker">03 / ASUS</span>
+            <div class="showcase-visual"><i class="fa-solid fa-microchip"></i></div>
+            <h3>تقنية تواكب اللعب</h3>
+            <p>قطع أصلية بضمان، مع مقارنة سريعة توضح لك الفرق بين الطرازات.</p>
+            <button class="showcase-cta" data-compare-group="components" type="button"><i class="fa-solid fa-scale-balanced"></i> ابدأ المقارنة</button>
+          </div>
+          <div class="showcase-tiles" id="asusGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE: MSI -->
+    <section class="section showcase-section reverse section-anim" id="msi" data-index="09">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">07</span>
+            <div>
+              <p class="section-eyebrow">Brand Spotlight</p>
+              <h2 class="section-title">MSI</h2>
+              <p class="section-sub">لوحات أم وشاشات ألعاب بمواصفات تنافسية وأسعار واضحة.</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <button class="head-pill head-pill-btn" data-compare-group="components" type="button"><i class="fa-solid fa-scale-balanced"></i> قارن المكونات</button>
+          </div>
+        </header>
+        <div class="showcase-grid">
+          <div class="showcase-intro reveal-piece" style="--d:.05s">
+            <span class="showcase-kicker">04 / MSI</span>
+            <div class="showcase-visual"><i class="fa-solid fa-server"></i></div>
+            <h3>أداء بتفاصيل دقيقة</h3>
+            <p>قارن الترددات والمقاسات والأسعار قبل أن تقرر — كل شيء في مشهد واحد.</p>
+            <button class="showcase-cta" data-compare-group="components" type="button"><i class="fa-solid fa-scale-balanced"></i> ابدأ المقارنة</button>
+          </div>
+          <div class="showcase-tiles" id="msiGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section why-section section-anim" id="why" data-index="10">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head center reveal-up">
+          <span class="section-index">08</span>
+          <p class="section-eyebrow">لماذا ربيع للتجارة</p>
+          <h2 class="section-title">ثقة وجودة وخدمة حقيقية</h2>
+          <p class="section-sub">أربعة أسباب تجعل تجربتك معنا مختلفة.</p>
+        </header>
+        <div class="why-grid">
+          <div class="why-card reveal-up" style="--d:.05s">
+            <span class="why-num">01</span>
+            <div class="why-icon"><i class="fa-solid fa-certificate"></i></div>
+            <h3>أصلي 100%</h3>
+            <p>كل قطعة عبر قنوات معتمدة — بدون نسخ مقلدة وبدون مقامرة السوق الرمادي.</p>
+          </div>
+          <div class="why-card reveal-up" style="--d:.12s">
+            <span class="why-num">02</span>
+            <div class="why-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>توصيل سريع</h3>
+            <p>شحن في نفس اليوم يغطي المدينة، مع تتبع الطلب حتى بابك.</p>
+          </div>
+          <div class="why-card reveal-up" style="--d:.19s">
+            <span class="why-num">03</span>
+            <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>دعم بشري حقيقي</h3>
+            <p>أشخاص حقيقيون على واتساب — بدون بوتات وبدون انتظار.</p>
+          </div>
+          <div class="why-card reveal-up" style="--d:.26s">
+            <span class="why-num">04</span>
+            <div class="why-icon"><i class="fa-solid fa-tags"></i></div>
+            <h3>أسعار عادلة</h3>
+            <p>أسعار واضحة بدون تضخيم مصطنع لعروض وهمية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="section location-section section-anim" id="location" data-index="11">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage">
+        <header class="section-head reveal-up">
+          <div class="section-head-main">
+            <span class="section-index">09</span>
+            <div>
+              <p class="section-eyebrow">موقعنا</p>
+              <h2 class="section-title">زورونا في متجرنا</h2>
+              <p class="section-sub">ساروجة ، دمشق، سوريا</p>
+            </div>
+          </div>
+          <div class="section-head-side">
+            <span class="head-pill"><i class="fa-solid fa-map-location-dot"></i> Sarouja, Damascus, Syria</span>
+          </div>
+        </header>
+        <div class="location-grid">
+          <div class="location-info reveal-up">
+            <div class="loc-card">
+              <div class="loc-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div><strong>العنوان</strong><p>ساروجة ، دمشق، سوريا</p></div>
+              </div>
+              <div class="loc-item">
+                <i class="fa-solid fa-phone"></i>
+                <div><strong>هاتف</strong><p><a href="tel:+963980829966">+963980829966</a></p></div>
+              </div>
+              <div class="loc-item">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div><strong>واتساب</strong><p><a href="https://wa.me/963988779070" target="_blank" rel="noopener">+963988779070</a></p></div>
+              </div>
+              <div class="loc-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div><strong>البريد</strong><p><a href="mailto:rabe3trade@gmail.com">rabe3trade@gmail.com</a></p></div>
+              </div>
+              <a class="btn-primary loc-btn" href="https://maps.app.goo.gl/aSWoMzbAVnS5zoM28" target="_blank" rel="noopener">
+                فتح في خرائط Google <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div class="location-map-wrap reveal-up">
+            <div class="map-3d-scene" id="map3d">
+              <div class="map-3d-inner">
+                <div class="map-frame">
+                  <iframe title="موقع ربيع للتجارة" src="https://www.google.com/maps?q=Sarouja,Damascus,Syria&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-holo-ring ring-1"></div>
+                <div class="map-holo-ring ring-2"></div>
+                <div class="map-pin-pulse"><i class="fa-solid fa-location-dot"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT CTA -->
+    <section class="cta-band section-anim" id="support" data-index="12">
+      <div class="section-curtain" aria-hidden="true"></div>
+      <div class="container section-stage cta-band-inner">
+        <div class="cta-scan" aria-hidden="true"></div>
+        <div class="cta-icon"><i class="fa-solid fa-headset"></i></div>
+        <div>
+          <h2>لم تجد ما تبحث عنه؟</h2>
+          <p>أخبرنا بالمواصفات والميزانية — سنؤمّنها ونرد خلال ساعة.</p>
+        </div>
+        <a class="btn-primary" href="https://wa.me/963988779070?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D9%84%D9%85%20%D8%A3%D8%AC%D8%AF%20%D9%85%D8%A7%20%D8%A3%D8%A8%D8%AD%D8%AB%20%D8%B9%D9%86%D9%87%20%E2%80%94%20%D9%87%D9%84%20%D9%8A%D9%85%D9%83%D9%86%D9%83%D9%85%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%AA%D9%8A%20%D8%A8%D8%AA%D8%A3%D9%85%D9%8A%D9%86%D9%87%D8%9F" target="_blank" rel="noopener">راسلنا على واتساب <i class="fa-solid fa-arrow-left"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-brand">
+          <img src="https://rt-rabea.com/_next/image?url=%2Flogo.png&w=256&q=75" alt="Rabee Trading">
+          <span class="brand-text">ربيع للتجارة</span>
+        </a>
+        <p>لابتوبات، كمبيوترات، شاشات، قطع، إكسسوارات وتجميعات PC. منتجات مضمونة وخيارات تناسب كل الاستخدامات. مبيع جملة ومفرق — توصيل ضمن دمشق — شحن لجميع المحافظات السورية</p>
+        <div class="footer-socials">
+          <a href="https://t.me/rabeetrading" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://www.instagram.com/rabe3_trade" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1EbibRUgMy/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://maps.app.goo.gl/aSWoMzbAVnS5zoM28" target="_blank" rel="noopener" aria-label="Location"><i class="fa-solid fa-map-location-dot"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>الأقسام</h4>
+        <ul>
+          <li><a href="#pcs">كمبيوترات</a></li>
+          <li><a href="#laptops">لابتوبات</a></li>
+          <li><a href="#categories">شاشات</a></li>
+          <li><a href="#categories">بلايستيشن</a></li>
+          <li><a href="#asus">كروت شاشة</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل</h4>
+        <ul>
+          <li>هاتف: <a href="tel:+963980829966">+963980829966</a></li>
+          <li>واتساب: <a href="https://wa.me/963988779070" target="_blank" rel="noopener">+963988779070</a></li>
+          <li>البريد: <a href="mailto:rabe3trade@gmail.com">rabe3trade@gmail.com</a></li>
+          <li>الموقع: ساروجة ، دمشق، سوريا</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Rabee Trading. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTIONS -->
+  <button class="compare-dock" id="compareDock" type="button">
+    <span class="dock-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+    <span class="dock-text">مقارنة 3D<small id="dockCount">اختر منتجين أو ثلاثة</small></span>
+  </button>
+  <a class="float-wa" href="https://wa.me/963988779070?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D8%B1%D8%A8%D9%8A%D8%B9%20%D9%84%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D8%A9!" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <button class="back-top" id="backTop" aria-label="العودة للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-label="تفاصيل">
+      <button class="modal-close" id="modalClose" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ZOOM VIEWER -->
+  <div class="zoom-overlay" id="zoomOverlay" aria-hidden="true">
+    <div class="zoom-bar">
+      <span class="zoom-title" id="zoomTitle">صورة المنتج</span>
+      <div class="zoom-tools">
+        <button type="button" id="zoomOut" aria-label="تصغير"><i class="fa-solid fa-minus"></i></button>
+        <span class="zoom-level" id="zoomLevel">100%</span>
+        <button type="button" id="zoomIn" aria-label="تكبير"><i class="fa-solid fa-plus"></i></button>
+        <button type="button" id="zoomReset" aria-label="إعادة ضبط"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <button type="button" id="zoomClose" aria-label="إغلاق"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+    <div class="zoom-stage" id="zoomStage">
+      <img id="zoomImg" src="" alt="" draggable="false">
+    </div>
+    <p class="zoom-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> مرّر بالفأرة للتكبير • اسحب لتحريك الصورة • اضغط Esc للإغلاق</p>
+  </div>
+
+  <!-- PAGE TRANSITION -->
+  <div class="page-transition" id="pageTransition" aria-hidden="true">
+    <div class="pt-panel pt-a"></div>
+    <div class="pt-panel pt-b"></div>
+    <div class="pt-mark"><img src="https://rt-rabea.com/_next/image?url=%2Flogo.png&w=256&q=75" alt=""><span>ربيع للتجارة</span></div>
+  </div>
+
+  <script>
+    (function () {
+      function load(src, onload) {
+        var s = document.createElement('script');
+        s.src = src;
+        s.onload = onload;
+        s.onerror = function () { console.error('Failed to load ' + src); };
+        document.head.appendChild(s);
+      }
+      load('data.js?t=' + Date.now(), function () {
+        load('app.js?v=20261122f');
+      });
+    })();
+  </script>
+</body>
+</html>
